@@ -1,0 +1,18 @@
+ALGORITHM Palindrome
+VAR
+    word : STRING;
+BEGIN
+    FUNCTION Palindrome(word) : BOOLEAN
+    VAR
+        i : INTEGER;
+    BEGIN
+        IF ( length(word)<= 1 ) THEN
+            Palindrome:= true;
+        ELSE_IF (word[0] = word[length(word)-1]) THEN
+            Palindrome := Palindrome (word[1 : length(word)-2 ]);
+        ELSE
+            Palindrome := false;
+        END_IF
+        RETURN Palindrome ;
+    END
+END
